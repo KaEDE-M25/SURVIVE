@@ -1,0 +1,756 @@
+fileFormatVersion: 2
+guid: 80deea3a325dfe04da2581af76dc0d42
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3459047904341108673
+    second: MP_0
+  - first:
+      213: -5503003964215772354
+    second: battle_chara_001_attack_1
+  - first:
+      213: 5602893619573111754
+    second: battle_chara_001_attack_2
+  - first:
+      213: -260822208296909615
+    second: battle_chara_001_attack_3
+  - first:
+      213: 2289813496351363765
+    second: battle_chara_001_attack_4
+  - first:
+      213: -5749878136802105334
+    second: battle_chara_001_attack_5
+  - first:
+      213: -8303106952465335866
+    second: battle_chara_001_attack_6
+  - first:
+      213: 3215381811327995688
+    second: battle_chara_001_attack_7
+  - first:
+      213: 1428288491618107291
+    second: battle_chara_001_attack_8
+  - first:
+      213: 4500937194414234174
+    second: battle_chara_001_attack_9
+  - first:
+      213: -6483712111671551033
+    second: battle_chara_001_attack_10
+  - first:
+      213: -737927146063405349
+    second: battle_chara_001_attack_11
+  - first:
+      213: -2543793054149911555
+    second: battle_chara_001_attack_12
+  - first:
+      213: 4974090400488154837
+    second: battle_chara_001_attack_13
+  - first:
+      213: 6700722328835074883
+    second: battle_chara_001_attack_14
+  - first:
+      213: 6358639067013700964
+    second: battle_chara_001_attack_15
+  - first:
+      213: 8167033024859306693
+    second: battle_chara_001_attack_16
+  - first:
+      213: 1075660155729685202
+    second: battle_chara_001_attack_17
+  - first:
+      213: -2671599301474674001
+    second: battle_chara_001_attack_18
+  - first:
+      213: -8598365961221073540
+    second: battle_chara_001_attack_19
+  - first:
+      213: -1311659771945070663
+    second: battle_chara_001_attack_20
+  - first:
+      213: 7346460114748733895
+    second: MP_1
+  - first:
+      213: 7455255624448741220
+    second: MP_2
+  - first:
+      213: -1699977928964076667
+    second: MP_3
+  - first:
+      213: 8810918242037365430
+    second: MP_4
+  - first:
+      213: -4917549636947074428
+    second: MP_5
+  - first:
+      213: -7179461183761388274
+    second: MP_6
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: battle_chara_001_attack_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 48
+        height: 128
+      alignment: 9
+      pivot: {x: 0.5, y: -0.2}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b3a5bfc0761a3b0800000000000000
+      internalID: -5503003964215772354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_2
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 104
+        width: 16
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5625, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acb35f4cf0a71cd40800000000000000
+      internalID: 5602893619573111754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_3
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 104
+        width: 21
+        height: 16
+      alignment: 9
+      pivot: {x: 0.6666667, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d40eec559f516cf0800000000000000
+      internalID: -260822208296909615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_4
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 80
+        width: 17
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 1, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b21be33e3d07cf10800000000000000
+      internalID: 2289813496351363765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_5
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 80
+        width: 20
+        height: 18
+      alignment: 9
+      pivot: {x: 0.6, y: 0.44444445}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a08202a7c445430b0800000000000000
+      internalID: -5749878136802105334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_6
+      rect:
+        serializedVersion: 2
+        x: 116
+        y: 80
+        width: 16
+        height: 24
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c93a3ee73075cc80800000000000000
+      internalID: -8303106952465335866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_7
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 73
+        width: 64
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f0579b8b45f9c20800000000000000
+      internalID: 3215381811327995688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_8
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 73
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ffca3d0dc42d310800000000000000
+      internalID: 1428288491618107291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_9
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 56
+        width: 16
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a5765088a867e30800000000000000
+      internalID: 4500937194414234174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_10
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 56
+        width: 26
+        height: 16
+      alignment: 9
+      pivot: {x: 0.725, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb5be5cf2a3506a0800000000000000
+      internalID: -6483712111671551033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_11
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 37
+        width: 22
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bded5cc9b2b52c5f0800000000000000
+      internalID: -737927146063405349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_12
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 34
+        width: 27
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfbd941e1b1a2bcd0800000000000000
+      internalID: -2543793054149911555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_13
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 42
+        width: 23
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d6e6c98dd4870540800000000000000
+      internalID: 4974090400488154837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_14
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 3
+        width: 44
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b2eb4c47fbdfc50800000000000000
+      internalID: 6700722328835074883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_15
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 4
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46dd54cba8c6e3850800000000000000
+      internalID: 6358639067013700964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_16
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 4
+        width: 23
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca7f9be341275170800000000000000
+      internalID: 8167033024859306693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_17
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 56
+        width: 16
+        height: 16
+      alignment: 9
+      pivot: {x: 0.55, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da2f4966338dee00800000000000000
+      internalID: 1075660155729685202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_18
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 33
+        width: 15
+        height: 19
+      alignment: 9
+      pivot: {x: 0.46666667, y: 0.42105263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faa9b6d07929cead0800000000000000
+      internalID: -2671599301474674001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_19
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 33
+        width: 20
+        height: 17
+      alignment: 9
+      pivot: {x: 0.6, y: 0.47058824}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c759b90e6b77ca880800000000000000
+      internalID: -8598365961221073540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: battle_chara_001_attack_20
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 32
+        width: 19
+        height: 16
+      alignment: 9
+      pivot: {x: 0.68421054, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf4b0b036c0ccde0800000000000000
+      internalID: -1311659771945070663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MP_0
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3850b0024efeffc0800000000000000
+      internalID: -3459047904341108673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MP_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 109
+        width: 16
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c97c281d8ed3f560800000000000000
+      internalID: 7346460114748733895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MP_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 109
+        width: 16
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46f0005ad73667760800000000000000
+      internalID: 7455255624448741220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MP_3
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 109
+        width: 15
+        height: 19
+      alignment: 9
+      pivot: {x: 0.46666667, y: 0.5263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58b871a94177868e0800000000000000
+      internalID: -1699977928964076667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MP_4
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 109
+        width: 16
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5263158}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba75a9757ba64a70800000000000000
+      internalID: 8810918242037365430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MP_5
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 111
+        width: 17
+        height: 17
+      alignment: 9
+      pivot: {x: 0.47058824, y: 0.5294118}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4822b64d8aa51cbb0800000000000000
+      internalID: -4917549636947074428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MP_6
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 112
+        width: 17
+        height: 16
+      alignment: 9
+      pivot: {x: 0.47058824, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d623f771e6d5c90800000000000000
+      internalID: -7179461183761388274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
