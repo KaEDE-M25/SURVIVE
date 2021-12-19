@@ -2,16 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// カメラの動作をコントロールするクラス
+//--====================================================--
+//--        カメラの動作をコントロールするクラス        --
+//--====================================================--
 public class CameraControll : MonoBehaviour
 {
     GameObject player;
     Vector3 vec;
 
-    // 振動用の変数
+    // 振動しているかどうか
     bool is_shake = false;
+    // 振動している時間を記録するタイマー
     float elapsed = 0f;
 
+    //##====================================================##
+    //##                     Start 初期化                   ##
+    //##====================================================##
     void Start()
     {
         // プレイヤーを取得
@@ -21,6 +27,9 @@ public class CameraControll : MonoBehaviour
 
     }
 
+    //##====================================================##
+    //##                      LateUpdate                    ##
+    //##====================================================##
     private void LateUpdate()
     {
         if (player != null && !is_shake)
@@ -32,7 +41,9 @@ public class CameraControll : MonoBehaviour
         }
     }
 
-
+    //##====================================================##
+    //##                振動をするコルーチン                ##
+    //##====================================================##
     public IEnumerator Shake(float duration, float magnitude)
     {
         // 振動をしないオプションだった場合は即停止
@@ -58,8 +69,5 @@ public class CameraControll : MonoBehaviour
         transform.position = vec;
         is_shake = false;
     }
-
-
-
 
 }
