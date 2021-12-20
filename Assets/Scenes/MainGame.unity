@@ -1092,7 +1092,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63c47216115dd2144aa1b6c94899585e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  test_env: 0
+  test_env: 1
   shop_entrance_point: {fileID: 1179744590}
   enemy_spawn_point: {fileID: 1287190329}
   active_enemys_parent: {fileID: 343408335}
@@ -5682,7 +5682,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 11
-  m_Sprite: {fileID: 460742682180473087, guid: 76388fcca4bc4114686dadb2a02bb017, type: 3}
+  m_Sprite: {fileID: 2246062366099267750, guid: 76388fcca4bc4114686dadb2a02bb017, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

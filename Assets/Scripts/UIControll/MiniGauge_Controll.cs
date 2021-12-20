@@ -4,32 +4,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//--====================================================--
+//--キャラクターについている小HPゲージの操作をするクラス--
+//--====================================================--
 public class MiniGauge_Controll : MonoBehaviour
 {
-    [SerializeField]
-    GameObject active_gauge;
-    [SerializeField]
-    GameObject damage_gauge;
-    [SerializeField]
-    GameObject empty_gauge;
-
-    [SerializeField]
-    GameObject parent;
+    // アクティブなゲージ
+    public GameObject Active_gauge { get; private set; }
+    // ダメージ分のゲージ
+    public GameObject Damage_gauge { get; private set; }
+    //空ゲージ
+    public GameObject Empty_gauge { get; private set; }
+    //ゲージを持っているキャラクターのCharacterコンポーネント
     Character parent_component;
-    public Tween damage_gauge_tween_red;
-    public Tween damage_gauge_tween_grey;
 
     float timer = 0f;
 
+    //##====================================================##
+    //##       初期化処理（キャラクター側から呼び出す）     ##
+    //##====================================================##
     public void SetParent()
     {
-        this.parent = transform.parent.gameObject;
-        parent_component = parent.GetComponent<Character>();
-        active_gauge = transform.Find("bar_hp_mini").gameObject;
-        damage_gauge = transform.Find("bar_hp_damage_mini").gameObject;
-        empty_gauge = transform.Find("bar_hp_empty_mini").gameObject;
+        parent_component = transform.parent.GetComponent<Character>();
+        Active_gauge = transform.Find("bar_hp_mini").gameObject;
+        Damage_gauge = transform.Find("bar_hp_damage_mini").gameObject;
+        Empty_gauge = transform.Find("bar_hp_empty_mini").gameObject;
     }
 
+    //##====================================================##
+    //##                Update    表示終了処理              ##
+    //##====================================================##
     private void Update()
     {
         if(timer >= 0f) 
@@ -41,43 +45,43 @@ public class MiniGauge_Controll : MonoBehaviour
         }
     }
 
+    //##====================================================##
+    //##              LateUpdate      向きの固定            ##
+    //##====================================================##
     private void LateUpdate()
     {
+        // 向きを固定する
         transform.localScale = transform.parent.localScale;
     }
 
-
-    // ゲージobjのゲッター
-    public GameObject Active_gauge() { return active_gauge; }
-    public GameObject Damage_gauge() { return damage_gauge; }
-    public GameObject Empty_gauge() { return empty_gauge; }
-
-
+    //##====================================================##
+    //##                   ゲージを隠す処理                 ##
+    //##====================================================##
     void Hide()
     {
         if (parent_component.HP > 0)
             this.gameObject.SetActive(false);
     }
 
+    //##====================================================##
+    //##                ゲージを減少させる処理              ##
+    //##====================================================##
     public void GaugeReduct(int reduction_value ,float time = 2f)
     {
         var value_from = (float)(parent_component.HP + reduction_value) / (float)parent_component.Max_HP;
         var value_to = (float)(parent_component.HP) / (float)parent_component.Max_HP;
 
-
         //アクティブゲージ減少
-        active_gauge.transform.localScale = new Vector3(value_to,active_gauge.transform.localScale.y,active_gauge.transform.localScale.z);
+        Active_gauge.transform.localScale = new Vector3(value_to,Active_gauge.transform.localScale.y,Active_gauge.transform.localScale.z);
 
         //赤ゲージ減少
-        damage_gauge_tween_red = damage_gauge.transform.DOScaleX(value_to, time).SetEase(Ease.OutCirc);
+        Damage_gauge.transform.DOScaleX(value_to, time).SetEase(Ease.OutCirc);
         // 死亡時は空ゲージも徐々に消す、消し終わったらキャラクターを消す
         if (parent_component.HP <= 0)
-            damage_gauge_tween_grey = empty_gauge.transform.DOScaleX(0, time).SetEase(Ease.OutCirc).OnComplete(() =>
+            Empty_gauge.transform.DOScaleX(0, time).SetEase(Ease.OutCirc).OnComplete(() =>
             {
                 if (parent_component.HP <= 0)
                 {
-                    //damage_gauge_tween_red?.Kill();
-                    //damage_gauge_tween_grey?.Kill();
                     parent_component.Dead();
                 }
             });
@@ -89,4 +93,3 @@ public class MiniGauge_Controll : MonoBehaviour
     }
 
 }
-

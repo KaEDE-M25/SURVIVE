@@ -1,5 +1,10 @@
 using UnityEngine;
 using System.Collections;
+
+// https://pukapuka-ahirusan.blogspot.com/2012/09/
+//--====================================================--
+//--           アスペクト比の計算処理をする             --
+//--====================================================--
 public class AspectControll : MonoBehaviour
 {
     // 縦横比です。インスペクタから修正します。

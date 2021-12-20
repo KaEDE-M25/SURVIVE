@@ -4,30 +4,44 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
+//--====================================================--
+//--        UI上のステータスバーを操作するクラス        --
+//--====================================================--
 public class UI_StatusBar : MonoBehaviour
 {
+    // ターゲットとなるステータス
     enum TargetStatus
     {
         HP,
         MP
     }
 
-    [SerializeField]
+    [SerializeField,Tooltip("このステータスバーが操作するステータス")]
     TargetStatus targetstatus;
 
-    [SerializeField]
+    [SerializeField,Tooltip("アクティブゲージ")]
     Image active_gauge;
-    [SerializeField]
+    [SerializeField,Tooltip("ダメージを表す所謂赤ゲージ")]
     Image damage_gauge;
-    // バーの中央に表示されるテキスト
-    [SerializeField]
+    [SerializeField,Tooltip("バーの中央に表示されるテキスト(ステータスの現在値と最大値を数値で示す)")]
     Text center_text;
 
+    // プレイヤーのFighterコンポーネント
     Fighters player_fighter_component;
     Tween damage_gauge_tween;
 
-    // ステータスの現在値を取得
+    //##====================================================##
+    //##                  Awake   初期化処理                ##
+    //##====================================================##
+    private void Awake()
+    {
+        player_fighter_component = GameObject.FindGameObjectWithTag("Player").GetComponent<Fighters>();
+        center_text.text = TargetStatus_current() + "/" + TargetStatus_max();
+    }
+
+    //##====================================================##
+    //##              ステータスの現在値を取得              ##
+    //##====================================================##
     int TargetStatus_current() 
     {
         switch (targetstatus) 
@@ -36,10 +50,11 @@ public class UI_StatusBar : MonoBehaviour
             case TargetStatus.MP: {return player_fighter_component.MP; }
             default: { throw new System.Exception("Invalid Status.");}
         }
-    
     }
 
-    // ステータスの最大値を取得
+    //##====================================================##
+    //##              ステータスの最大値を取得              ##
+    //##====================================================##
     int TargetStatus_max()
     {
         switch (targetstatus)
@@ -48,34 +63,26 @@ public class UI_StatusBar : MonoBehaviour
             case TargetStatus.MP: { return player_fighter_component.Max_MP; }
             default: { throw new System.Exception("Invalid Status."); }
         }
-
     }
 
-
-    private void Awake()
-    {
-        var player = GameObject.Find("Knight");
-        player_fighter_component = player.GetComponent<Fighters>();
-        center_text.text = TargetStatus_current() +"/"+ TargetStatus_max();
-        
-
-    }
-
-    // ゲージを手動更新する
+    //##====================================================##
+    //##                ゲージを手動更新する                ##
+    //##====================================================##
     public void RenewGaugeAmount()
     {
         center_text.text = TargetStatus_current() + "/" + TargetStatus_max();
-        var value = (float)(TargetStatus_current()) / (float)TargetStatus_max();
+        var value = (float)TargetStatus_current() / TargetStatus_max();
         active_gauge.fillAmount = value;
         damage_gauge.fillAmount = value;
     }
 
-
-    // ゲージを減少させる処理
+    //##====================================================##
+    //##               ゲージを減少させる処理               ##
+    //##====================================================##
     public void GaugeReduct(int reduction_value, float time = 1f) 
     {
-        var value_from = (float)(TargetStatus_current() + reduction_value) / (float)TargetStatus_max();
-        var value_to = (float)(TargetStatus_current()) / (float)TargetStatus_max();
+        var value_from = (float)(TargetStatus_current() + reduction_value) / TargetStatus_max();
+        var value_to = (float)TargetStatus_current() / TargetStatus_max();
 
         center_text.text = TargetStatus_current() + "/" + TargetStatus_max();
 
@@ -96,6 +103,5 @@ public class UI_StatusBar : MonoBehaviour
             value_to,
             time
             ).SetEase(Ease.OutCirc);
-        
     }
 }

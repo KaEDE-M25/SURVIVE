@@ -7,25 +7,27 @@ using DG.Tweening;
 public delegate void Choose_Yes();
 public delegate void Choose_No();
 
+//--====================================================--
+//--   はいいいえウィンドウを出す処理を統括するクラス   --
+//--====================================================--
 public class PopUpWindowControll : MonoBehaviour
 {
-    [SerializeField]
-    GameObject texts;
-
-    [SerializeField]
+    [SerializeField,Tooltip("説明文を表示するTextコンポーネント")]
     Text explain_text;
 
-    [SerializeField]
+    [SerializeField,Tooltip("ウィンドウの背景")]
     Image background;
 
-    [SerializeField]
+    [SerializeField,Tooltip("選択肢 YES と NO を表示するTextコンポーネント")]
     Text[] yes_no = new Text[2];
 
-
+    // 返り値 (どちらの選択肢を選択したか)
     public bool return_value = false;
 
+    // ウィンドウを閉じたかどうか
     public bool? Is_complete { get; private set; } = null;
 
+    // 選択中の選択肢 (0 or 1)
     int choose = 0;
 
     Tween active_chooses_tween;
@@ -52,18 +54,22 @@ public class PopUpWindowControll : MonoBehaviour
                 Pausing(false);
             }, this,new Vector2(200f, 160f), CONFIRM_SAVE_TEXT,Vector2.zero));
     */
+    //##====================================================##
+    //##              ウィンドウを呼び出す処理              ##
+    //##====================================================##
     public static IEnumerator CreateSmallWindow(Choose_Yes yes_func,Choose_No no_func,MonoBehaviour calling_component,Vector2 window_size,string guide_text, Vector2 position) 
     {        
+        // ウィンドウを作る
         GameObject window = Instantiate(Resources.Load<GameObject>((EigenValue.PREFAB_DIRECTORY_UIS + "PopUpWindow_YorN")), position, Quaternion.identity, GameObject.Find("Canvas").transform);
         PopUpWindowControll popUpWindowControll = window.GetComponent<PopUpWindowControll>();
 
+        // ウィンドウの設定をする
         popUpWindowControll.Setting(window_size, guide_text);
 
         bool return_value = false;
-        //calling_component.gameObject.SetActive(false);
         calling_component.enabled = false;
 
-        
+        // ウィンドウが消えるまで待つ
         yield return new WaitUntil(() =>
         {
             if (window != null)
@@ -75,22 +81,17 @@ public class PopUpWindowControll : MonoBehaviour
             return true;
         });
 
-        if (return_value) // はい
+        if (return_value) // はい の処理
             yes_func();
-        else // いいえ
+        else // いいえ の処理
             no_func();
 
         yield break;
     }
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    //##====================================================##
+    //##              Update    ウィンドウ操作              ##
+    //##====================================================##
     void Update()
     {
         // 選択終了していないなら
@@ -117,7 +118,7 @@ public class PopUpWindowControll : MonoBehaviour
                 Renew_Board();
             }
 
-            // 決定キーを押したら返答を返す
+            // 決定キーを押したらウィンドウを閉じる
             if (InputControll.GetInputDown(InputControll.INPUT_ID_A))
             {
                 AudioControll.PlaySE(AudioControll.SOUND_PLAYER_ID_UI, AudioFilePositions.UI.DECISION);
@@ -139,6 +140,7 @@ public class PopUpWindowControll : MonoBehaviour
                 }
                 WindowClose();
             }
+            // キャンセルキーでも閉じれる
             else if (InputControll.GetInputDown(InputControll.INPUT_ID_B))
             {
                 AudioControll.PlaySE(AudioControll.SOUND_PLAYER_ID_UI, AudioFilePositions.UI.CANCEL);
@@ -146,20 +148,23 @@ public class PopUpWindowControll : MonoBehaviour
                 WindowClose();            
             }
         }
-
     }
 
-    void Renew_Board() // メニューを更新する処理
+    //##====================================================##
+    //##               メニューを更新する処理               ##
+    //##====================================================##
+    void Renew_Board()
     {
+        // 上下運動させるテキストを変更
         active_chooses_tween.timeScale = 0f;
         active_chooses_tween?.Kill();
         yes_no[choose == 1 ? 0 : 1].rectTransform.localPosition = new Vector3(yes_no[choose == 1 ? 0 : 1].rectTransform.localPosition.x, yes_no[choose].rectTransform.localPosition.y, 0f);
         active_chooses_tween = yes_no[choose].rectTransform.DOMoveY(yes_no[choose].rectTransform.localPosition.y + 5f, 0.5f).SetEase(Ease.OutCirc).SetLoops(-1, LoopType.Yoyo);
-
-
     }
 
-    // 内容の設定する
+    //##====================================================##
+    //##                    内容の設定する                  ##
+    //##====================================================##
     // 引数　１→ウィンドウの大きさ、２→表示されるテキスト
     public void Setting(Vector2 scale,string text) 
     {
@@ -173,8 +178,8 @@ public class PopUpWindowControll : MonoBehaviour
              rectTransform.DOSizeDelta(scale, 0.2f).SetEase(Ease.InOutCirc).OnComplete(() =>
              {
                  // 説明文を表示
-                 texts.gameObject.SetActive(true);
-                 texts.transform.Find("text").GetComponent<RectTransform>().sizeDelta = new Vector2(rectTransform.sizeDelta.x - 20f, rectTransform.sizeDelta.y * 0.75f - 40f);
+                 explain_text.transform.parent.gameObject.SetActive(true);
+                 explain_text.GetComponent<RectTransform>().sizeDelta = new Vector2(rectTransform.sizeDelta.x - 20f, rectTransform.sizeDelta.y * 0.75f - 40f);
 
                  // yesとnoの選択肢の位置を調整
                  yes_no[0].rectTransform.localPosition = new Vector3(rectTransform.sizeDelta.x / -6f, rectTransform.sizeDelta.y * -0.125f, 0f);
@@ -183,14 +188,15 @@ public class PopUpWindowControll : MonoBehaviour
                  active_chooses_tween = yes_no[choose].rectTransform.DOMoveY(yes_no[choose].rectTransform.localPosition.y + 5f, 0.5f).SetEase(Ease.OutCirc).SetLoops(-1, LoopType.Yoyo);
 
                  Is_complete = false;
-
-
              });
 
          });
 
     }
-    // ウィンドウを閉じる処理
+
+    //##====================================================##
+    //##               ウィンドウを閉じる処理               ##
+    //##====================================================##
     void WindowClose()
     {
         active_chooses_tween?.Kill();
@@ -198,18 +204,13 @@ public class PopUpWindowControll : MonoBehaviour
 
         RectTransform rectTransform = GetComponent<RectTransform>();
 
-        texts.gameObject.SetActive(false);
+        explain_text.transform.parent.gameObject.SetActive(false);
         rectTransform.DOSizeDelta(new Vector2(rectTransform.sizeDelta.x, 18f), 0.2f).SetEase(Ease.InOutCirc).OnComplete(() =>
         {
             rectTransform.DOSizeDelta(new Vector2(18f,18f), 0.2f).SetEase(Ease.InOutCirc).OnComplete(() =>
             {
                 Destroy(this.gameObject);
             });
-
         });
-
-
     }
-
-
 }

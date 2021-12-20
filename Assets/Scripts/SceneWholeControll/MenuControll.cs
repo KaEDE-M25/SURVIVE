@@ -72,7 +72,6 @@ public class MenuControll : MonoBehaviour
             // åàíËÉLÅ[ÇâüÇµÇΩÇÁëJà⁄
             if (InputControll.GetInputDown(InputControll.INPUT_ID_A))
             {
-                AudioControll.PlaySE(AudioControll.SOUND_PLAYER_ID_UI, AudioFilePositions.UI.DECISION);
                 switch (choose)
                 {
                     case 0: //ÇÕÇ∂ÇﬂÇ©ÇÁ
@@ -105,6 +104,8 @@ public class MenuControll : MonoBehaviour
                         throw new System.Exception("Invalid menu content.");
 
                 }
+
+                AudioControll.PlaySE(AudioControll.SOUND_PLAYER_ID_UI, AudioFilePositions.UI.DECISION);
                 tween?.Kill();
                 cursor_tween?.Kill();
             }

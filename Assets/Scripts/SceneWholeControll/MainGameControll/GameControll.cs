@@ -752,9 +752,9 @@ public class GameControll : MonoBehaviour
         fighter_comp.GetComponent<Rigidbody2D>().simulated = !enable;
         fighter_comp.GetComponent<Animator>().enabled = !enable;
         fighter_comp.enabled = !enable;
-        fighter_comp.Mini_hp_bar.Active_gauge().transform.DOTogglePause();
-        fighter_comp.Mini_hp_bar.Damage_gauge().transform.DOTogglePause();
-        fighter_comp.Mini_hp_bar.Empty_gauge().transform.DOTogglePause();
+        fighter_comp.Mini_hp_bar.Active_gauge.transform.DOTogglePause();
+        fighter_comp.Mini_hp_bar.Damage_gauge.transform.DOTogglePause();
+        fighter_comp.Mini_hp_bar.Empty_gauge.transform.DOTogglePause();
         fighter_comp.Mini_hp_bar.enabled = !enable;
 
         // エフェクトの動作をすべて止める
@@ -783,9 +783,9 @@ public class GameControll : MonoBehaviour
             enemy.GetComponent<Animator>().enabled = !enable;
 
             Character enemy_chara_cp = enemy.GetComponent<Character>();
-            enemy_chara_cp.Mini_hp_bar.Active_gauge().transform.DOTogglePause();
-            enemy_chara_cp.Mini_hp_bar.Damage_gauge().transform.DOTogglePause();
-            enemy_chara_cp.Mini_hp_bar.Empty_gauge().transform.DOTogglePause();
+            enemy_chara_cp.Mini_hp_bar.Active_gauge.transform.DOTogglePause();
+            enemy_chara_cp.Mini_hp_bar.Damage_gauge.transform.DOTogglePause();
+            enemy_chara_cp.Mini_hp_bar.Empty_gauge.transform.DOTogglePause();
             enemy_chara_cp.Mini_hp_bar.enabled = !enable;
             enemy_chara_cp.enabled = !enable;
 
@@ -805,9 +805,9 @@ public class GameControll : MonoBehaviour
 
             if (effect.TryGetComponent(out Character chara_cp))
             {
-                chara_cp.Mini_hp_bar.Active_gauge().transform.DOTogglePause();
-                chara_cp.Mini_hp_bar.Damage_gauge().transform.DOTogglePause();
-                chara_cp.Mini_hp_bar.Empty_gauge().transform.DOTogglePause();
+                chara_cp.Mini_hp_bar.Active_gauge.transform.DOTogglePause();
+                chara_cp.Mini_hp_bar.Damage_gauge.transform.DOTogglePause();
+                chara_cp.Mini_hp_bar.Empty_gauge.transform.DOTogglePause();
                 chara_cp.Mini_hp_bar.enabled = !enable;
                 chara_cp.enabled = !enable;
             }
