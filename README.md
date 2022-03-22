@@ -50,8 +50,13 @@ Unityで作った2Dアクションゲームです。
 - ボタンL　→　アイテムストックを左に移動
 - ボタンR　→　アイテムストックを右に移動
 
-# ダウンロード
-準備中…DropBoxかどこかにビルド後のファイルのURLを貼ります。
+# ダウンロード等
+PC版・Android版
+こちらからダウンロードできます↓
+URL：https://drive.google.com/drive/folders/1ByZ6BdFYWFGg8HG_947vPYRE6aNQ2kyy
+WebGL版
+こちらに接続すると、ダウンロードせずに遊べます。
+URL：https://kaede-m25.com/SURVIVE_webgl/
 
 # 開発環境
 ## PC
