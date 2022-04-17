@@ -1,5 +1,12 @@
 ![preview0](https://user-images.githubusercontent.com/78368179/146725227-d2c4a3ac-98f2-4fa5-9319-b3a5c0738bb0.png)
 ![preview1](https://user-images.githubusercontent.com/78368179/146725235-b1674d59-26a3-4250-ac08-c450f1e400e5.png)
+※Macでこのソースコードを見る場合について
+
+筆者のMacからコードを見た際に、CS1009エラーが発生し正常に読み込めない不具合がありました。
+
+文字コードをUTF-8にすることで解決できましたので、このソースコードをダウンロードしUnityでプロジェクトとして開く場合はご注意ください。
+
+
 # 紹介動画
 https://www.youtube.com/watch?v=HXz9t39ai60
 
